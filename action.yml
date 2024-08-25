@@ -1,0 +1,7 @@
+name: "Tail CT log action"
+description: "Tails the CT log for a given domain"
+runs:
+  using: "composite"
+  steps:
+    - run: sudo -E $GITHUB_ACTION_PATH/release/latest/tail-ct-log-action
+      shell: bash
