@@ -12,6 +12,8 @@ release:
 	@docker rm -f tail-ct-log-action-build
 
 release-test:
+	@mkdir -p release/latest
 	@docker build -t tail-ct-log-action-build -f Dockerfile.build .
 	@docker create -ti --name tail-ct-log-action-build tail-ct-log-action-build bash 
+	@docker cp tail-ct-log-action-build:/tail-ct-log-action release/latest/tail-ct-log-action-test
 	@docker rm -f tail-ct-log-action-build
