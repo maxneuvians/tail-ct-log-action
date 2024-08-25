@@ -64,6 +64,7 @@ func main() {
 
 		if err != nil {
 			log.Default().Printf("Error: %s", err)
+			break
 		}
 
 		if len(records) == 0 {
