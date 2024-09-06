@@ -72,6 +72,8 @@ func main() {
 			break
 		}
 
+		log.Printf("Found %d records", len(records))
+
 		entries := make([]entry, 0)
 
 		for _, record := range records {
